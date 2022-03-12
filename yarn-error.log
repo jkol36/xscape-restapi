@@ -1,0 +1,82 @@
+Arguments: 
+  /Users/jonathankolman/.nvm/versions/node/v14.15.1/bin/node /usr/local/bin/yarn add @react-native-firebase/notifications
+
+PATH: 
+  /Users/jonathankolman/.rvm/gems/ruby-3.0.0/bin:/Users/jonathankolman/.rvm/gems/ruby-3.0.0@global/bin:/Users/jonathankolman/.rvm/rubies/ruby-3.0.0/bin:/Users/jonathankolman/.asdf/shims:/usr/local/Cellar/asdf/0.9.0/libexec/bin:/usr/local/bin:/Users/jonathankolman/.nvm/versions/node/v14.15.1/bin:/opt/anaconda3/bin:/opt/anaconda3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jonathankolman/Downloads/geckodriver\ 3:/Users/jonathankolman/Downloads/chromedriver:/Library/Apple/usr/bin:/Users/jonathankolman/Library/Android/sdk/emulator:/Users/jonathankolman/Library/Android/sdk/tools:/Users/jonathankolman/Library/Android/sdk/tools/bin:/Users/jonathankolman/Library/Android/sdk/platform-tools:/Users/jonathankolman/Downloads/Geckodriver/bin:/Users/jonathankolman/Downloads/Geckodriver:/Users/jonathankolman/Downloads/geckodriver 3:/Users/jonathankolman/Downloads/chromedriver_91:/home/nespl/android-ndk-r8:/home/nespl/android-ndk-r8:/Users/jonathankolman/.rvm/bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.15.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@react-native-firebase%2fnotifications: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66988:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140662:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141634:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141556:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (_stream_readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "name": "endopage-restapi",
+    "version": "1.0.0",
+    "description": "endopage endopage-restapi",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "test": "mocha --compilers js:babel-register -t 20000"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/jkol36/endopage-restapi.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/jkol36/endopage-restapi/issues"
+    },
+    "homepage": "https://github.com/jkol36/endopage-restapi#readme",
+    "dependencies": {
+      "analytics-node": "^2.1.0",
+      "aws-sdk": "^2.41.0",
+      "babel-preset-es2015": "^6.5.0",
+      "babel-preset-es2016": "^6.22.0",
+      "babel-register": "^6.5.2",
+      "bcrypt": "^1.0.2",
+      "bluebird": "^3.3.3",
+      "body-parser": "^1.15.0",
+      "cors": "^2.7.1",
+      "ejs": "^2.5.6",
+      "express": "^4.13.4",
+      "express-session": "^1.15.2",
+      "json-web-token": "^2.1.3",
+      "moment": "^2.18.1",
+      "momentjs": "^1.1.17",
+      "mongoose": "^4.4.11",
+      "s3-uploader": "^2.0.3",
+      "superagent": "^1.8.3",
+      "superagent-bluebird-promise": "^4.2.0"
+    },
+    "devDependencies": {
+      "chai": "^3.5.0",
+      "dotenv": "^2.0.0",
+      "mocha": "^2.4.5",
+      "supertest": "^1.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

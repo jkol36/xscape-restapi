@@ -5,17 +5,34 @@ import mongoose from 'mongoose'
 import agent from 'superagent-bluebird-promise'
 import fs from 'fs'
 
-describe('routes', () => {
+describe.only('routes', () => {
   it('should send a notification to a device', async () => {
-    const deviceToken = "f7Dj1-ByvEe3vRBb8Q5ONN:APA91bGi2eVlvTl724WQGiD1VO9Ahk3jDJFgGltOG8O7O860utPcilykfZRM6tHimZmrt1Vm3nq-t-bhiRIJ5lct9mjdQNXnUBVWTrNVrcV2AOHj52Ri8YYS7b4jlPozqg1i9mhFPXiV";
+    const deviceToken = "cWXt0N3kFU9kp-JG6S9ib1:APA91bFJfXY1bY0bQxITzQT9Qnu5IFPDKFvlxonPC6R5sQUg-KuoVYbwPaAmyRlMHDY4iyPN-gTuovQIyB1xJ465MRp0mlDWgbWK7JUECmr-_aS29kmQmzqND-n2AebXXxxluyw-Ca4q";
     const messageData = {
-      title: 'Go Live Request',
-      body: 'Jkol36 wants you to go live!'
+      data: {
+        title: 'Go Live Request',
+        body: 'Jkol36 wants you to go live!',
+      },
+      token: deviceToken,
+      apns: {
+        payload: {
+          aps: {
+            contentAvailable: true,
+          },
+        },
+        headers: {
+          'apns-push-type': 'background',
+          'apns-priority': '5',
+          'apns-topic': '', // your app bundle identifier
+        },
+      },
+      
     }
     agent
       .post('http://localhost:5001/notifications/sendToDevice')
       .send({deviceToken, messageData})
       .then(res => {
+        console.log(res.body)
         expect(res).to.be.ok
       })
 
